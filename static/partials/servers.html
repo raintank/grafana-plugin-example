@@ -1,9 +1,21 @@
-<topnav title="Example Plugin" icon="fa fa-fw fa-smile-o" subnav="false">
+<topnav title="Example Plugin" icon="fa fa-fw fa-smile-o" subnav="true">
+	<ul class="nav">
+		<li class="active" ><a href="example/servers">Overview</a></li>
+		<li><a href="example/servers/new">Add new</a></li>
+	</ul>
 </topnav>
-<div>
-    <h1>Example Plugin</h1>
-    <div ng-repeat="server in servers">
-        <span>{{server.hostname}}</span>
-        <span>{{server.ip}}</span>
-    </div>
+<div class="page-container">
+    <div class="page">
+    	<h1>Example Plugin</h1>
+	    <table class="grafana-options-table">
+	    	<tr>
+	    		<th>Hostname</th>
+	    		<th>IP address</th>
+	    	</tr>
+	    	<tr ng-repeat="server in servers">
+	        	<td>{{server.hostname}}</td>
+	        	<td>{{server.ip}}</td>
+	        </tr>
+	    </table>
+	</div>
 </div>

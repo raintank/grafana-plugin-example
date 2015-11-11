@@ -1,0 +1,43 @@
+<topnav title="Example Plugin" icon="fa fa-fw fa-smile-o" subnav="true">
+	<ul class="nav">
+		<li><a href="example/servers">Overview</a></li>
+		<li class="active" ><a href="example/servers/new">Add new</a></li>
+	</ul>
+</topnav>
+
+<div class="page-container">
+	<div class="page">
+		<h2>Add Server</h2>
+		<form name="editForm">
+			<div class="tight-form">
+				<ul class="tight-form-list">
+					<li class="tight-form-item" style="width: 80px">
+						Hostname
+					</li>
+					<li>
+						<li>
+							<input type="text" class="input-xlarge tight-form-input" ng-model="server.hostname" placeholder="server hostname" required>
+						</li>
+					</li>
+				</ul>
+				<div class="clearfix"></div>
+			<div class="tight-form">
+				<ul class="tight-form-list">
+					<li class="tight-form-item" style="width: 80px">
+						Ip Address
+					</li>
+					<li>
+						<li>
+							<input type="text" class="input-xlarge tight-form-input" ng-model="server.ip" placeholder="ip.ad.dr.ess" required>
+						</li>
+					</li>
+				</ul>
+				<div class="clearfix"></div>
+			</div>
+			<div class="pull-right" style="margin-top: 35px">
+				<button type="submit" class="btn btn-success" ng-click="save()">Add</button>
+				<a class="btn btn-inverse" href="example/servers">Cancel</a>
+			</div>
+		</form>
+	</div>
+</div>

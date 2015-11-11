@@ -15,9 +15,12 @@ function (angular, app, _) {
     $routeProvider
       .when("/example/servers", {
         templateUrl: 'plugins/example/static/partials/servers.html',
-        controller : 'exampleCtrl'
-      }
-    );
+        controller : 'listServersCtrl'
+      })
+      .when("/example/servers/new", {
+        templateUrl: 'plugins/example/static/partials/add_server.html',
+        controller : 'addServersCtrl'
+      });
   });
 
   _.forEach(['controllers', 'directives'], function(moduleName){
