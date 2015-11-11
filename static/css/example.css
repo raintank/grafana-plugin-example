@@ -1,0 +1,9 @@
+/*overwrite the grafana icon*/
+img.logo-icon {
+  box-sizing: border-box;
+  background: url(../img/icon.png) no-repeat;
+  width: 32px; /* Width of new image */
+  height: 40px; /* Height of new image */
+  padding-left: 32px; /* Equal to width of new image */
+  border: 0;
+}
