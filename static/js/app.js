@@ -1,41 +1,27 @@
-require([
+define([
   'angular',
   'app/app',
-  'lodash'
+  './module',
+  './add_servers_ctrl',
+  './list_servers_ctrl',
 ],
-function (angular, app, _) {
+function (angular, app, module) {
   "use strict";
-  console.log("initializing grafana-plugin-example app.");
-  var ex = angular.module('example', []);
-  app.useModule(ex);
 
-  // register new routes within the AngularJS app. 
-  ex.config(function($routeProvider) {
+  app.useModule(module);
+
+  // register new routes within the AngularJS app.
+  module.config(function($routeProvider) {
     console.log("adding plugin routes");
     $routeProvider
       .when("/example/servers", {
-        templateUrl: 'plugins/example/static/partials/servers.html',
-        controller : 'listServersCtrl'
+        templateUrl: 'public/plugins/external-example/partials/servers.html',
+        controller : 'ListServersCtrl'
       })
       .when("/example/servers/new", {
-        templateUrl: 'plugins/example/static/partials/add_server.html',
-        controller : 'addServersCtrl'
+        templateUrl: 'public/plugins/external-example/partials/add_server.html',
+        controller : 'AddServersCtrl'
       });
-  });
-
-  _.forEach(['controllers', 'directives'], function(moduleName){
-    var module = angular.module('example.'+moduleName, []);
-    app.useModule(module);
-  })
-  
-  // the app base url is public/.  When loading dependencies from 
-  // external plugin urls the path needs to be relative to the site root,
-  // which is 1 directory above the app url.
-  require([
-    '../plugins/example/static/js/controllers/all',
-//    '../plugins/example/static/directives/all',
-  ], function() {
-    console.log("loaded example plugin components.");
   });
 
 });

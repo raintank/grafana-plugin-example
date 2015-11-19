@@ -1,0 +1,36 @@
+{
+  "pluginType": "external",
+
+  "routes": [
+    {
+      "path": "/external-example/api/*",
+      "method": "*",
+      "reqSignedIn": true,
+      "reqGrafanaAdmin": false,
+      "reqRole": "Admin",
+      "url": "http://localhost:5000/api"
+    }
+  ],
+
+  "css": [
+    {"href": "public/plugins/external-example/css/example.css"}
+  ],
+
+  "js": [
+    {"module": "plugins/external-example/js/app"}
+  ],
+
+  "menuItems": [
+    {
+      "text": "Example Plugin",
+      "icon": "fa fa-fw fa-smile-o",
+      "href": "/example/servers",
+      "adminOnly": false
+    }
+  ],
+
+  "staticRoot": {
+    "url": "external-example",
+    "path": "static"
+  }
+}
