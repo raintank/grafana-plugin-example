@@ -20,12 +20,11 @@
     {"module": "plugins/external-example/js/app"}
   ],
 
-  "menuItems": [
+  "mainNavLinks": [
     {
       "text": "Example Plugin",
       "icon": "fa fa-fw fa-smile-o",
-      "href": "/example/servers",
-      "adminOnly": false
+      "href": "/example/servers"
     }
   ],
 
