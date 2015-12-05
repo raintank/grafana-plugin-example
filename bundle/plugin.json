@@ -1,0 +1,10 @@
+{
+  "pluginType": "bundle",
+  "type": "example",
+  "module": "",
+  "enabled": true,
+  "panelPlugins": [],
+  "datasourcePlugins": [],
+  "externalPlugins": ["example"]
+}
+

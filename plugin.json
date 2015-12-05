@@ -1,6 +1,6 @@
 {
   "pluginType": "external",
-
+  "type": "example",
   "routes": [
     {
       "path": "/external-example/api/*",
